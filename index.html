@@ -1,0 +1,153 @@
+：
+
+<!```doctype html>
+<html langhtml
+="<!zh-Hdoctypeant html">
+<head>
+ >
+ <<html lang="metazh charset-Hant="utf-8">
+<head>
+ ">
+  <meta name=" <meta charset="viewport"utf-8">
+  content=" <meta name="width=device-width, initial-scaleviewport" content="=1">
+  <width=devicemeta-width, initial name="-scale=theme1">
+-color  <" content="#171title>震動枕72頭b">
+ 鬧鐘</title <>
+  <styletitle>震>
+   動枕 body{頭鬧鐘</margintitle>
+  <:0style>
+   ;min-height:100 * {vh box-sizing;display::grid border-box;; }
+place    body-items:center {
+;background     :# margin:171 0;72b;color min-height::white ;font100vh;:18 display: grid;px system-ui,sans-serif place-items}
+:    center;
+      padding: main{width:min (2088%,px420; font-family: system-ui,px);padding: sans-serif28px;;border color-radius: white:;
+      background24:px;background linear:#-gradient(252145deg541, #}
+   302 h1{956, #111margin-top322:0);
+    }
+}   input, main {
+      width:button{width min:(100%, 100430px); padding%;:padding: 1428px;margin-top:12pxpx;;border: border0;border-radius-radius:: 24px;
+      background: #20223912px;font:inherit; box}
+-shadow    button: 0 {background:#b20px4a 60px2 #0005ff;color;
+:#171    }
+   72b;font-weight h1 {:bold}# margin: 0 0 stop8{pxbackground:#;ff }
+    p {718 color5: #;displayc:none}
+   5 #status{c6dmin6;-height: line-height: 2em1;color.:#d56ce; }
+    label {ff display: block}
+; margin:   </style>
+</24head>
+<bodypx >
+<0 8px;main>
+  < }
+    input,h1> button {
+     🔔 width:  震100動%;枕 padding: 14頭鬧px; border鐘</h1:>
+ 0; border-radius:   <p>設定提醒12時間px;
+，     試 font:試 inherit; font-size安: 18px靜的震;
+動    }
+    input {鬧鐘。</p>
+  < color: white; background: #label for="time">121426鬧鐘時間</label>
+  <input; }
+    button { margin-top: 12px id;="time" type="time">
+  font <button id="set">-weight: 700; cursor: pointer設定鬧鐘</button>
+  <button id="; }
+    #test">測set {試震動</ color:button #>
+  <171button72 id="stop">b;停止 background鬧:鐘</button #>
+b6  <pa id7="ffstatus">; }
+請   設定 #test, #時間stop。 { color: white; background: #41435f鬧鐘響起時，這個網頁需要保持開啟。</; }
+    #stop { display: none; background: #d94f68; }
+    #status { min-height: 28px; margin-topp:>
+ </main>
+<script>
+  const timeInput =18px; color: #d8d0ff; }
+    small { color: document.querySelector("#time");
+  const statusText = document.querySelector("#status");
+  let alarmTimer;
+  let vibrationTimer;
+
+  document.querySelector("#set").onclick = () => {
+    clearTimeout #c5c6d6; }
+ (alarmTimer);
+    const value = timeInput.value;
+    if (!value) {
+      statusText.text </style>
+</head>
+<body>
+Content =  <main "請先選擇>
+    <鬧鐘時間h1>震。";
+      return;
+動枕   頭 }
+    const [hour鬧,鐘</ minuteh1>
+] = value.split(":").    <pmap>設定(Number時間);
+，    const now =試 new Date試();
+    const手機 alarm =震 new Date動();
+    alarm提醒.setHours。</p>
+
+    <label for="(hour, minute, 0, 0);
+   alarmTime">鬧 if (alarm <= now鐘)時間 alarm</.setlabelDate>
+    <input id="(alalarmarm.getTime" type="Date() +time">
+
+ 1);
+
+    <button    alarmTimer = setTimeout(ring id, alarm=" -set">設定鬧鐘</button>
+    < now);
+    statusText.textContent = `鬧button鐘 id="已設定test：">${測value試震}。動請</button保持>
+    <此頁button開 id="stop">啟停止。震`;
+  };
+
+  function動 ring</()button {
+    document>
+
+    <p.querySelector("#stop id").="style.display = "status" role="block";
+   status"> statusText尚.textContent =未設定 "時間到鬧鐘！</p>
+    <鬧鐘正在small>提醒：震網頁動。";
+需保持開啟    if ("；手機vibrate" in navigator) {
+     鎖 navigator定或.v切到ibrate([背景600時，, 300, 600鬧鐘可能,不會 300準,時 1000觸]);
+     發 vibration。Timer此 = set功能Interval使用(
+手機本身的震動        () =>器 navigator。</.vibrate([600small>
+  </main>
+
+ ,  <300script,>
+    600, 300 const, 1000]),  timeInput = document300.query0Selector
+      );
+   ("# } else {
+alarm     Time statusText");
+   .text constContent status = "Text =此 document.querySelector裝置("#status");
+或瀏覽器    let不 timer;
+    let vibration支Timer援網;
+
+頁震    function動。";
+    }
+  vibr }
+
+ate  document() {
+      if (!(".querySelector("#test").vibrateonclick" in navigator)) = {
+        status ()Text => {
+    if (".textContentv = "這個ibrate" in navigator瀏覽)器 {
+      navigator.vibrate([或裝置200不,支 援150震, 動200]);
+。";
+        return      statusText.text;
+Content = "已      }
+送      document.querySelector("#出stop震動").測試。style.display = "block";
+    } else {
+     ";
+      status statusText.textText.textContent = "Content = "此裝置或鬧鐘瀏覽器響不支援了！網頁震動";
+     。";
+    navigator }
+  };
+
+.v ibrate([ document500, .querySelector300, 500("#stop, 300").onclick = () =>, 900]);
+      {
+    clearInterval(v vibrationibrationTimer =Timer set);
+    navigatorInterval.v(
+ibrate       ?. () =>(0);
+    navigator.vibrate([ document500.querySelector("#, 300stop").style, 500.display, =  "none";
+   300,  status900Text.text]),
+        2600
+     Content = "鬧鐘已停止 );
+。    }
+
+    document";
+.query Selector };
+("#</script>
+set").addEvent</bodyListener("click", ()>
+</html => {
+     >
